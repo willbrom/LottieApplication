@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Lottie Application</string>
+    <string name="name_text_label"><u>Name</u>:</string>
+    <string name="item_text_label"><u>Items</u>:</string>
+</resources>

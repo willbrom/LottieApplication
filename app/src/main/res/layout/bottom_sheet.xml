@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottom_sheet"
+    android:layout_width="match_parent"
+    android:layout_height="500dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    app:behavior_hideable="true"
+    app:behavior_peekHeight="0dp"
+    app:layout_behavior="android.support.design.widget.BottomSheetBehavior">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/bag_big"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bag_big"
+        android:layout_margin="26dp">
+
+
+
+        <!--<GridView-->
+            <!--android:id="@+id/grid_view"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="bottom"-->
+            <!--android:layout_marginBottom="90dp"-->
+            <!--android:layout_marginEnd="8dp"-->
+            <!--android:layout_marginStart="8dp"-->
+            <!--android:gravity="center"-->
+            <!--android:horizontalSpacing="0dp"-->
+            <!--android:numColumns="2"-->
+            <!--android:stretchMode="columnWidth"-->
+            <!--android:verticalSpacing="20dp"-->
+            <!--android:visibility="visible"-->
+            <!--app:layout_constraintBottom_toBottomOf="parent"-->
+            <!--app:layout_constraintEnd_toEndOf="parent"-->
+            <!--app:layout_constraintStart_toStartOf="parent" />-->
+
+        <TextView
+            android:id="@+id/name_label_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="49dp"
+            android:layout_marginTop="108dp"
+            android:text="@string/name_text_label"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/name_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="John"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@+id/name_label_textView"
+            app:layout_constraintTop_toBottomOf="@+id/name_label_textView" />
+
+        <TextView
+            android:id="@+id/hospital_file_label_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="56dp"
+            android:text="Hospital File"
+            app:layout_constraintStart_toEndOf="@+id/name_label_textView"
+            app:layout_constraintTop_toTopOf="@+id/name_label_textView" />
+
+        <TextView
+            android:id="@+id/appointment_label_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Appointment"
+            app:layout_constraintStart_toStartOf="@+id/hospital_file_label_textView"
+            app:layout_constraintTop_toBottomOf="@+id/hospital_file_label_textView" />
+
+        <ImageView
+            android:id="@+id/green_tick_hospital_imageView"
+            android:layout_width="25dp"
+            android:layout_height="19dp"
+            android:layout_marginStart="12dp"
+            app:layout_constraintStart_toEndOf="@+id/hospital_file_label_textView"
+            app:layout_constraintTop_toTopOf="@+id/hospital_file_label_textView"
+            app:srcCompat="@drawable/greentick" />
+
+        <ImageView
+            android:id="@+id/green_tick_appointment_imageView"
+            android:layout_width="25dp"
+            android:layout_height="19dp"
+            android:layout_marginStart="12dp"
+            app:layout_constraintStart_toEndOf="@+id/appointment_label_textView"
+            app:layout_constraintTop_toTopOf="@+id/appointment_label_textView"
+            app:srcCompat="@drawable/greentick"
+            android:visibility="visible"/>
+
+        <ImageView
+            android:id="@+id/empty_tick_hospital_imageView"
+            android:layout_width="25dp"
+            android:layout_height="19dp"
+            android:layout_marginStart="12dp"
+            app:layout_constraintStart_toEndOf="@+id/hospital_file_label_textView"
+            app:layout_constraintTop_toTopOf="@+id/hospital_file_label_textView"
+            app:srcCompat="@drawable/emptytick"
+            android:visibility="invisible"/>
+
+        <ImageView
+            android:id="@+id/empty_tick_appointment_imageView"
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="4dp"
+            app:layout_constraintStart_toEndOf="@+id/appointment_label_textView"
+            app:layout_constraintTop_toTopOf="@+id/appointment_label_textView"
+            app:srcCompat="@drawable/emptytick"
+            android:visibility="invisible"/>
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="150dp"
+            android:layout_height="1dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="12dp"
+            android:background="#515151"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appointment_label_textView" />
+
+        <TextView
+            android:id="@+id/items_label_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="6dp"
+            android:textSize="18sp"
+            android:text="@string/item_text_label"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view" />
+
+        <ImageView
+            android:id="@+id/cash_imageView"
+            android:layout_width="51dp"
+            android:layout_height="52dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="0dp"
+            app:layout_constraintStart_toStartOf="@+id/items_label_textView"
+            app:layout_constraintTop_toBottomOf="@+id/items_label_textView"
+            app:srcCompat="@drawable/cash"
+            android:onClick="onClickCash" />
+
+        <ImageView
+            android:id="@+id/id_card_imageView"
+            android:layout_width="51dp"
+            android:layout_height="52dp"
+            android:layout_marginTop="2dp"
+            app:layout_constraintStart_toStartOf="@+id/cash_imageView"
+            app:layout_constraintTop_toBottomOf="@+id/cash_imageView"
+            app:srcCompat="@drawable/idcard"
+            android:onClick="onCLickId" />
+
+        <ImageView
+            android:id="@+id/insurance_card_imageView"
+            android:layout_width="51dp"
+            android:layout_height="52dp"
+            android:layout_marginTop="6dp"
+            app:layout_constraintStart_toStartOf="@+id/id_card_imageView"
+            app:layout_constraintTop_toBottomOf="@+id/id_card_imageView"
+            app:srcCompat="@drawable/insurancecard"
+            android:onClick="onClickInsurance" />
+
+        <ImageView
+            android:id="@+id/prescription_imageView"
+            android:layout_width="51dp"
+            android:layout_height="52dp"
+            android:layout_marginTop="6dp"
+            app:layout_constraintStart_toStartOf="@+id/insurance_card_imageView"
+            app:layout_constraintTop_toBottomOf="@+id/insurance_card_imageView"
+            app:srcCompat="@drawable/priscription"
+            android:onClick="onClickPrescription" />
+
+        <TextView
+            android:id="@+id/cash_label_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="38dp"
+            android:layout_marginTop="12dp"
+            android:textSize="16sp"
+            android:text="Cash in hand"
+            app:layout_constraintStart_toEndOf="@+id/cash_imageView"
+            app:layout_constraintTop_toTopOf="@+id/cash_imageView" />
+
+        <TextView
+            android:id="@+id/person_id_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="37dp"
+            android:textSize="16sp"
+            android:text="Person I.D"
+            app:layout_constraintStart_toStartOf="@+id/cash_label_textView"
+            app:layout_constraintTop_toBottomOf="@+id/cash_label_textView" />
+
+        <TextView
+            android:id="@+id/insurance_card_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="34dp"
+            android:textSize="16sp"
+            android:text="Insurance card"
+            app:layout_constraintStart_toStartOf="@+id/person_id_textView"
+            app:layout_constraintTop_toBottomOf="@+id/person_id_textView" />
+
+        <TextView
+            android:id="@+id/prescription_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:textSize="16sp"
+            android:text="Prescription"
+            app:layout_constraintStart_toStartOf="@+id/insurance_card_textView"
+            app:layout_constraintTop_toBottomOf="@+id/insurance_card_textView" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</FrameLayout>
